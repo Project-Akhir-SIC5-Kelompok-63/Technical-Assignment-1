@@ -2,9 +2,9 @@
 #include <Adafruit_Sensor.h>
 #include <HTTPClient.h>
 
-const char* ssid = "ZTE_2.4G_UnYeTA";
-const char* password = "LaxRFCrP";
-const char* serverAddress = "http://192.168.1.10:5000/sensor/data";
+const char* ssid = "memel";
+const char* password = "admin123";
+const char* serverAddress = "http://192.168.0.113:5000/sensor/data";
 int sensorPin = 34;
 
 int getAirQualityData() {
