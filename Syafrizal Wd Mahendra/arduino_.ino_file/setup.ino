@@ -4,7 +4,7 @@
 
 // Definisikan pin dan tipe sensor
 #define DHTPIN 4
-#define DHTTYPE DHT22
+#define DHTTYPE DHT11
 
 // Informasi jaringan WiFi
 const char* ssid = "Wokwi-GUEST";
