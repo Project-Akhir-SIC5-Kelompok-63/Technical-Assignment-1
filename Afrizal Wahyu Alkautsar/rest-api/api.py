@@ -2,14 +2,18 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+temperature_data = []
+
 @app.route('/api/ta', methods=['POST'])
 def data():
     temperature = request.form.get('temperature')
 
     if temperature:
+        temperature_data.append(temperature)
         response = {
             'status': 'success',
-            'temperature': temperature
+            'temperature': temperature,
+            'all_temperatures': temperature_data
         }
         return jsonify(response), 200
     else:
@@ -23,7 +27,7 @@ def data():
 def get_data():
     response = {
         'status': 'success',
-        'message': 'Valid data'
+        'data': temperature_data
     }
     return jsonify(response), 200
 
