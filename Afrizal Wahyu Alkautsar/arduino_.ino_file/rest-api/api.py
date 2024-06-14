@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route('/data', methods=['POST'])
+@app.route('/api/ta', methods=['POST'])
 def data():
     temperature = request.form.get('temperature')
 
